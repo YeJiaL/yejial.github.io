@@ -1,2 +1,2 @@
-this is a index test 
+this is a index test hexo
 
