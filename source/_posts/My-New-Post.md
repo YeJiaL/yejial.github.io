@@ -1,7 +1,11 @@
 ---
 title: My New Post
 date: 2020-12-04 14:33:11
+categories:
+- Diary
 tags:
+- PS3
+- Game
 ---
 
 Hexo详细教程

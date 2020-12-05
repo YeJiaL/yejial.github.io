@@ -2,7 +2,11 @@
 ---
 title: mybatis
 date: 2020-12-04 14:33:11
+categories:
+- Diary
 tags:
+- PS3
+- Game
 ---
 ## 使用 Wrapper 自定义SQL
 
