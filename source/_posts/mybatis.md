@@ -23,7 +23,7 @@ tags:
 
 
 ```
-select @@tx_isolation
+select @@tx_isolation 事务级别
 ```
 
 
