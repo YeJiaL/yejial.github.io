@@ -56,3 +56,52 @@ docker logs --tail  300 -f  test  //查看启动日志,test为容器名称
 ### docker-compose安装
 
 http://get.daocloud.io/   
+
+
+
+
+
+### docker进入，退出容器命令
+
+```
+进入容器命令：
+
+docker attach 容器ID
+或者
+
+docker exec -it 容器ID /bin/bash 
+或者
+
+docker exec -it 容器的name bash
+退出容器命令
+
+exit
+或者
+
+Ctrl+P+Q
+```
+
+
+
+### docker启动命令
+
+```
+docker ps -a　查看本地所有运行的容器
+docker ps        产看正在运行的容器
+docker start 容器id 运行容器
+docker rm 容器id    移出容器
+
+
+docker ps // 查看所有正在运行容器
+$ docker stop containerId // containerId 是容器的ID
+
+$ docker ps -a // 查看所有容器
+$ docker ps -a -q // 查看所有容器ID
+
+$ docker stop $(docker ps -a -q) //  stop停止所有容器
+$ docker  rm $(docker ps -a -q) //   remove删除所有容器
+```
+
+
+
+参考-[莫小安Docker-compose常用命令 - 特别实用](https://www.cnblogs.com/moxiaoan/p/9299404.html)

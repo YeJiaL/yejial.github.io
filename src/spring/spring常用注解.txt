@@ -1,0 +1,81 @@
+@AutoConfigureAfter(TrackingElasticSearchClientConfig.class)
+
+
+@ConditionalOnBean(RestHighLevelClient.class)
+@ConditionalOnMissingBean
+
+
+
+@ConditionalOnProperty(prefix = "common.tracking.es", name = "host")
+@ConfigurationProperties(prefix = "common.tracking.es")
+
+
+@Configuration
+@ConditionalOnClass({ Client.class, TransportClientFactoryBean.class })
+@ConditionalOnProperty(prefix = "spring.data.elasticsearch", name = "cluster-nodes", matchIfMissing = false)
+@EnableConfigurationProperties(ElasticsearchProperties.class)
+
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration
+
+
+
+
+
+
+
+@ConditionalOnxxx常见注解如下：
+
+@ConditionalOnClass ： classpath中存在该类时起效
+
+@ConditionalOnMissingClass ： classpath中不存在该类时起效
+
+@ConditionalOnBean ： DI容器中存在该类型Bean时起效
+
+@ConditionalOnMissingBean ： DI容器中不存在该类型Bean时起效
+
+@ConditionalOnSingleCandidate ： DI容器中该类型Bean只有一个或@Primary的只有一个时起效
+
+@ConditionalOnExpression ： SpEL表达式结果为true时
+
+@ConditionalOnProperty ： 参数设置或者值一致时起效
+
+@ConditionalOnResource ： 指定的文件存在时起效
+
+@ConditionalOnJndi ： 指定的JNDI存在时起效
+
+@ConditionalOnJava ： 指定的Java版本存在时起效
+
+@ConditionalOnWebApplication ： Web应用环境下起效
+
+@ConditionalOnNotWebApplication ： 非Web应用环境下起效
+
+
+
+
+
+
+
+Bean Validation 中内置的 constraint   
+
+@Null  被注释的元素必须为 null   
+@NotNull   被注释的元素必须不为 null   
+@AssertTrue   被注释的元素必须为 true   
+@AssertFalse   被注释的元素必须为 false   
+@Min(value)   被注释的元素必须是一个数字，其值必须大于等于指定的最小值   
+@Max(value)   被注释的元素必须是一个数字，其值必须小于等于指定的最大值   
+@DecimalMin(value)  被注释的元素必须是一个数字，其值必须大于等于指定的最小值   
+@DecimalMax(value)  被注释的元素必须是一个数字，其值必须小于等于指定的最大值   
+@Size(max=, min=)  被注释的元素的大小必须在指定的范围内   
+@Digits (integer, fraction)   被注释的元素必须是一个数字，其值必须在可接受的范围内   
+@Past  被注释的元素必须是一个过去的日期   
+@Future   被注释的元素必须是一个将来的日期   
+@Pattern(regex=,flag=)  被注释的元素必须符合指定的正则表达式   
+
+Hibernate Validator 附加的 constraint   
+@NotBlank(message =)  验证字符串非null，且长度必须大于0   
+@Email  被注释的元素必须是电子邮箱地址   
+@Length(min=,max=)  被注释的字符串的大小必须在指定的范围内   
+@NotEmpty  被注释的字符串的必须非空   
+@Range(min=,max=,message=)  被注释的元素必须在合适的范围内 
+

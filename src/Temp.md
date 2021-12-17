@@ -6,6 +6,8 @@
 
 ## 前端启动
 
+> yarn add  包
+>
 > yarn start:local
 
 ```
@@ -107,55 +109,6 @@ console.log(timestamp)
 
 
 
-## 角色token
-
-### Admin_ROLW
-
-```
-Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjI5MTc2NzEyMDgyMDQ4MDczIiwiY2xpZW50SWQiOiJDaGF0Ym90LWZyb250Iiwicm9sZXMiOltdLCJpc3MiOiJvcGVuaWQ6Ly9jb20udWloLnVwbHVzLmF1dGgvdjEiLCJ1c2VyTmFtZSI6IuW5s-WPsOeuoeeQhuWRmCIsInVzZXJJZCI6IjQyMjkxNzY3MTIwODIwNDgwNzMiLCJub25jZSI6Ijg5ZmU1OGU0ZWRmYTRlMGE5MzQxZjc1ODBlZDVmYjI4IiwidXNlckxvZ2luSWQiOiJBZG1pblJvbGVAdWloY2xvdWQuY24iLCJhdWQiOiJDaGF0Ym90LWZyb250IiwicGVybWlzc2lvbnMiOltdLCJhcHBJZCI6IjQxMTA4MTA1NDAxNDA0NzgwMDkiLCJuYW1lIjoi5bmz5Y-w566h55CG5ZGYIiwiZXhwIjoxNTk1NDk1MDc4LCJpYXQiOjE1OTQ4OTAyNzh9.PTnguokGzLkCY3Mb9YQeObds3nAUueuW_fYVQ-Yk34R3hSwjDVj-j0b4yct2dhtFgiu73zunNm0Al-3XiNeBFXxs1oXRCREP1SlBaY0WKsptHR-Mp11Q8WQO8WYNMAEnOSVf-8haaKyM7tUcquAZ7glnuQuzcAYYU_ne7Mkd1-UMJ0pnUtQxUFO_18OaDRsOgHUwJZ1T5XkaxmJerbIwWEX_UCbRlUGoRvXgMMTUTberkM2gZpPyExxvuaWMMX3zSnhGdawqjtqFDzZ1lj5fqlZrrxwtoJTWbuV76yKpYeTbZB_PDTDDSwCXbGBaZJJq3snhc1JV0qdyHyFSu5JP4g
-
- Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjI5MTc2NzEyMDgyMDQ4MDczIiwiY2xpZW50SWQiOiJDaGF0Ym90LWZyb250Iiwicm9sZXMiOltdLCJpc3MiOiJvcGVuaWQ6Ly9jb20udWloLnVwbHVzLmF1dGgvdjEiLCJ1c2VyTmFtZSI6IuW5s-WPsOeuoeeQhuWRmCIsInVzZXJJZCI6IjQyMjkxNzY3MTIwODIwNDgwNzMiLCJub25jZSI6ImYzMjlmOWMwYmRlZDRkNDJiNzgyMDk0OTQyOTg1YjdiIiwidXNlckxvZ2luSWQiOiJBZG1pblJvbGVAdWloY2xvdWQuY24iLCJhdWQiOiJDaGF0Ym90LWZyb250IiwicGVybWlzc2lvbnMiOltdLCJhcHBJZCI6IjQxMTA4MTA1NDAxNDA0NzgwMDkiLCJuYW1lIjoi5bmz5Y-w566h55CG5ZGYIiwiZXhwIjoxNTk1MDA3Mjc0LCJpYXQiOjE1OTQ5NDk2NzR9.RWyEjqpte3-9YbVjOKw1XG_7_pglB1yBuQkqKcD-GNGIZLXK488JxO1VSxfapU5_3-AtyMF1KW7_V98NOnIzkaZBb6RR-M5iioEpP2g8-xJTpICLMPv0gyu6LZIsirPhrdxrNfyZyEemWe3bE6WieBftqUlqLjp_waRqhAJnILeoW1oIScRFkNtPp9Bll-53Bvx8EkOBJvIRWIN6rye7qJfquR_GJUJkgFCgVLxnubtYbE868i9hAKES9p6VWqF2UH4VEu_7l4jU1gs6ZPzi0ONMuzipmsHmivwiO3HFPDyOisSukTPE-vbxGgXQ7bNBsrcnBITxVvErvcpEte-MiA
-```
-
-
-
-### common
-
-```
-Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjI5MTc2NzEyMDgyMDQ4MTA5IiwiY2xpZW50SWQiOiJDaGF0Ym90LWZyb250Iiwicm9sZXMiOltdLCJpc3MiOiJvcGVuaWQ6Ly9jb20udWloLnVwbHVzLmF1dGgvdjEiLCJ1c2VyTmFtZSI6IuS6keW5s-WPsOaZrumAmueUqOaItyIsInVzZXJJZCI6IjQyMjkxNzY3MTIwODIwNDgxMDkiLCJub25jZSI6Ijk2ZmRjODNhNWViNjQwNDViOTVhYzFlMTJiNjFhNDNjIiwidXNlckxvZ2luSWQiOiJDb21tb25Vc2VyUm9sZUB1aWhjbG91ZC5jbiIsImF1ZCI6IkNoYXRib3QtZnJvbnQiLCJwZXJtaXNzaW9ucyI6W10sImFwcElkIjoiNDExMDgxMDU0MDE0MDQ3ODAwOSIsIm5hbWUiOiLkupHlubPlj7Dmma7pgJrnlKjmiLciLCJleHAiOjE1OTU0OTUxMjgsImlhdCI6MTU5NDg5MDMyOH0.Yu02hBKE-A9mUqfHcjul1q9eb0rzpkKuVMqMCnmhGoQfVGkx_cifs6S2A1rC2djIUr9wga1WFsGLnDnCnobecjAaI259YUG_njK5gsP4EtXhntkfrpggNZJJ8uiS4iqtKUYE6Rj7iheC6BmN33P3nyaJkD0GS6s9h0u8-FsGBxfxczZcIaAAt35yJ9SlnJdezLLoR9gxVNYhJ788yAfSSsD-X60ImdmdOkMcRykXIspccAKUndxoPcEN2GxMzPJ-NyC-Q5V5XGw-j1gHri5emrTAexZslzhevDUBZbEl-9PD_XwqO1ZWRoZkab5j-27f_tE205lMjKZNOpuIE4flVA
-```
-
-
-
-
-
-## query	
-
-```
-查询主键
-301c11434e3fa7cea22916ea2b88d346
-
-
-
-sessionid
-7a226826ac0e413cb2bfaacaa8fd3820
-
-
-
-sessionid
-a872e41340a442659e43035372e32720
-
-robotCode
-f711ac95
-
-2020/06/24 09:34:35
-
-
-http://10.6.209.45:30201/chatbot-dev
-```
-
-
-
 ```
 一种可视化加油方法
 一种可视化油量方法
@@ -230,3 +183,22 @@ true
 
 # [springboot aop 自定义注解方式实现完善日志记录（完整源码）](https://www.cnblogs.com/wenjunwei/p/9639909.html)
 
+
+
+# maven的package与install命令区别
+
+```
+maven install 是将打好的jar包安装到本地库中，一般没有设置过是在 用户目录下的 .m2\下面。
+maven package 只是将你的代码打包到输出目录，一般的是 target下面。
+```
+
+
+
+
+
+企业后台收到请求后，需要做如下操作：
+
+1. 对收到的请求做Urldecode处理
+2. 通过参数msg_signature[对请求进行校验](https://open.work.weixin.qq.com/api/doc/90000/90135/90237#12976/消息体签名校验)，确认调用者的合法性。
+3. [解密echostr](https://open.work.weixin.qq.com/api/doc/90000/90135/90237#12976/密文解密得到msg的过程)参数得到消息内容(即msg字段)
+4. 在1秒内响应GET请求，响应内容为上一步得到的明文消息内容(不能加引号，不能带bom头，不能带换行符)

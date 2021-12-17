@@ -7,8 +7,15 @@
 [相关链接](https://www.cnblogs.com/accumulater/p/7110811.html)
 
 > windows dos 常用命令行
+>
+> cd .>windowDoc.txt      新建文件
+>
+> 创建非空文件，命令**echo [fileContent]>\*.\***，如echo myname>a.txt
+>
+> type NUL > .log
+>
 > 有关某个命令的详细信息，请键入 HELP 命令名
-> cd .>windowDoc.txt: 新建文件
+>
 > dir (directory) ：列出当前目录下的文件以及文件夹
 >
 > md (make directory)： 创建目录

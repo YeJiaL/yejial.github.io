@@ -81,10 +81,14 @@ gzip 命令
 gzip *% 把当前目录下的每个文件压缩成 .gz 文件。gzip -dv *% 把当前目录下每个压缩的文件解压，并列出详细的信息。gzip -l *% 详细显示例1中每个压缩的文件的信息，并不解压。gzip usr.tar% 压缩 tar 备份文件 usr.tar，此时压缩文件的扩展名为.tar.gz。
 ```
 
-## 删除命令
+## 文件命令
+
+### 删除命令
 
 ```
-rm -rf /var/log/httpd/access 将会删除/var/log/httpd/access目录以及其下所有文件、文件夹  ！！慎重
+rm -rf /var/log/httpd/access 将会删除/var/log/httpd/access目录以及其下所有文件、文件夹  
+！！慎重
+rm -rf * 删除当前文件夹下的所有文件和文件夹
 rm -f filename
 mkdir 
 创建文件 touch
@@ -92,7 +96,7 @@ mkdir
 
 
 
-## 复制命令
+### 复制命令
 
 ```
 
@@ -105,6 +109,18 @@ cp -r /home/packageA/. /home/cp/packageB/
 cp -r /home/packageA /home/packageB
 
 运行命令之后packageB文件夹下就有packageA文件夹了。
+```
+
+### 重命名
+
+```
+例子：将目录A重命名为B
+
+mv A B
+
+例子：将/a目录移动到/b下，并重命名为c
+
+mv /a /b/c
 ```
 
 
@@ -135,5 +151,77 @@ How to exit the Vim editor?
 你也可以直接在“正常模式”下输入“ZZ”来保存并退出Vim（和:x相同），或者“ZQ”不保存并退出（和:q!相同）注意此处ZZ大写和小写是完全不同的。
 
 Vim还有一个帮助菜单，可以通过“:help”调出来，基本能够解决你的绝大多数问题
+```
+
+
+
+## 查看文件大小
+
+```
+du -h ljl.txt
+```
+
+
+
+## 返回上一级目录
+
+```
+cd -  
+
+ 
+
+-  ==  $OLDPWD
+
+可以 echo $OLDPWD查看
+
+cd -   ==   cd $OLDPWD
+```
+
+
+
+## ctrl键+esc组合
+
+```
+ctrl+a:光标移到行首。
+
+ctrl+b:光标左移一个字母
+
+ctrl+c:杀死当前进程。
+
+ctrl+d:退出当前 Shell。
+
+ctrl+e:光标移到行尾。
+
+ctrl+h:删除光标前一个字符，同 backspace 键相同。
+
+ctrl+k:清除光标后至行尾的内容。
+
+ctrl+l:清屏，相当于clear。
+
+ctrl+r:搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索bash的history
+
+ctrl+u: 清除光标前至行首间的所有内容。
+
+ctrl+w: 移除光标前的一个单词
+
+ctrl+t: 交换光标位置前的两个字符
+
+ctrl+y: 粘贴或者恢复上次的删除
+
+ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符
+
+ctrl+f: 光标右移
+
+ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复
+
+esc组合
+
+esc+d: 删除光标后的一个词
+
+esc+f: 往右跳一个词
+
+esc+b: 往左跳一个词
+
+esc+t: 交换光标位置前的两个单词
 ```
 

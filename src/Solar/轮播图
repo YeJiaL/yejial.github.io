@@ -1,0 +1,22 @@
+
+
+## 轮播图不能查看，查看该环境carousel_pic数据表是否有数据
+
+若carousel_pic数据表无数据
+
+1. 打开management的swagger界面，以服务工程师的token调取 carouselPicManagement下的/v1/service/carouselPicManagement/接口，**依次****依次****依次**上传同目录下的三张轮播图片
+2. 查看轮播图能否查看。若仍然无数据请联系后台工程师
+
+若carousel_pic数据表有数据
+
+1. 以服务工程师的token调取 carouselPicManagement下的/v1/service/refresh接口,刷新CarouselPicp缓存数据
+2. 查看轮播图能否查看。
+3. 若仍然不能查看轮播图。清空该环境carousel_pic数据表（先备份原carousel_pic表，先备份原carousel_pic表，先备份原carousel_pic表)
+4. 打开management的swagger界面，以服务工程师的token调取 carouselPicManagement下的/v1/service/carouselPicManagement/接口，**依次****依次****依次**上传同目录下的三张轮播图片
+5. 查看轮播图有无数据。若仍然无数据请联系后台工程师
+
+## 表中有数据,且需新增轮播图数据
+
+1. 以服务工程师的token调取，以服务工程师的token调取 carouselPicManagement下的/v1/service/carouselPicManagement/接口
+2. 以服务工程师的token调取 carouselPicManagement下的/v1/service/refresh接口,刷新CarouselPicp缓存数据
+3. /v1/carouselPics/list接口查看是否有数据

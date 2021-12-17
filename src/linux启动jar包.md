@@ -22,7 +22,7 @@ nohup java -jar XXX.jar >temp.txt &
 
 nohup java -jar robot-api-0.0.1-SNAPSHOT.jar & （推荐使用这种）
 
-nohup java -jar robot-api-0.0.1-SNAPSHOT.jar >temp.log &
+nohup java -jar robot-api-0.0.1-SNAPSHOT.ja >temp.log &
 
 nohup java -jar robot-api-0.0.1-SNAPSHOT.jar --spring.config.location=/usr/local/mapp/temp/test2/application.yml >temp.log &
 
@@ -167,5 +167,11 @@ post：http://localhost:9200/blog1/_analyze
 ```
 图形界面到dos命令行：ctrl+alt+f2
 dos命令行到图形界面：输入startx
+
+
+虚拟机查看ip地址命令
+
 ```
+
+
 
