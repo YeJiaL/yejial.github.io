@@ -30,3 +30,42 @@
 
 
 ## [CentOS7安装单机kubernetes和Docker](https://www.cnblogs.com/com3/articles/13255342.html)
+
+
+
+
+
+查看k8s容器内日志
+
+> kubectl get pods 
+>
+> kubectl logs -f --tail 200 solar-iotservice-deploy-784679965f-4snxw 
+
+kubectl exec -it <podName> -c <containerName> -n <namespace> -- shell comand
+
+> 
+
+> #适用于当前pod只有一个容器
+> kubectl exec -it superset-3fpnq -- /bin/bash      
+
+
+
+> #适用于当前pod只有一个容器 --container or -c 参数
+> kubectl exec -it superset-3fpnq --container main-app -- /bin/*bash*  
+
+
+
+
+
+> 张铮(Zheng ZHANG) 1-15 11:34:57
+> 10.246.0.4  UplusIoTSolarUser r7myyOsL0g7D
+>
+> 张铮(Zheng ZHANG) 1-15 11:35:23
+> 登陆后执行  sudo su -  切换到root
+
+kubectl exec -it solar-iotservice-deploy-784679965f-4snxw -- /bin/bash   
+
+kubectl logs -f --tail 200 solar-iotservice-deploy-784679965f-4snxw
+
+重启  kubectl delete po solar-iotservice-deploy-784679965f-4snxw
+

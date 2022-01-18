@@ -1,0 +1,10 @@
+
+`
+java:S2095"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(õ„è
+=
+java:S2189""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(À
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÄÎ¡ùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ï¦ÿ˜øÿÿÿÿ
+P
+java:S4719$":Replace Charset.forName() call with StandardCharsets.UTF_8(şÁû€
