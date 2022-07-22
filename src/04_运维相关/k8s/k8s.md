@@ -33,6 +33,17 @@
 
 
 
+```
+kubectl get pod <pod-name> -o yaml 查看 Pod 的配置是否正确
+kubectl describe pod <pod-name> 查看 Pod 的事件
+kubectl logs <pod-name> [-c <container-name>] 查看容器日志
+————————————————
+版权声明：本文为CSDN博主「砚上有墨」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_45423952/article/details/117747436
+```
+
+
+
 
 
 查看k8s容器内日志
@@ -63,13 +74,17 @@ kubectl exec -it <podName> -c <containerName> -n <namespace> -- shell comand
 > 张铮(Zheng ZHANG) 1-15 11:35:23
 > 登陆后执行  sudo su -  切换到root
 
-kubectl exec -it solar-iotservice-deploy-79698cfb95-9zfbw -- /bin/bash   
+kubectl exec -it solar-iotservice-deploy-79698cfb95-22m8g -- /bin/bash   
 
 kubectl logs -f --tail 200 solar-iotservice-deploy-79698cfb95-22m8g
 
-kubectl logs -f --tail 200 solar-iotservice-deploy-79698cfb95-7qj5f
+kubectl logs -f --tail 200 solar-iotservice-deploy-79698cfb95-22m8g
 
 重启  kubectl delete po solar-iotservice-deploy-79698cfb95-7qj5f
+
+
+
+重启kubectl delete po solar-mgr-admin-deploy-5d5cdf965c-n5v22 -n prod
 
 
 
@@ -82,3 +97,8 @@ kubectl logs -f --tail 200 solar-iotservice-deploy-79698cfb95-7qj5f
 
 
 
+查看ingress 
+
+kubectl get ingress -n [命名空间]
+
+kubectl get ingress -n devr7myyOsL0g7D

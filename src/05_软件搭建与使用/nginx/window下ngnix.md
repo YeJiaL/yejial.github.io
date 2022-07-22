@@ -2,7 +2,7 @@ windows下开启关闭nginx
 
 开启
 
-> nginx.exe
+> nginx.exe10.6.109.242
 
 
 

@@ -477,6 +477,24 @@ http://localhost:9200/uih_chatbot_business/_update_by_query
 
 ![image-20200706161023658](es相关整理.assets/image-20200706161023658.png)
 
+```
+POST uda_tem_record/_update_by_query
+{
+  "query": {
+    "term": {
+      "deviceId.keyword": "25l5Ey4bUwBTFGY6" 
+    }
+  },
+  "script": {
+    "lang": "painless",
+    "source": "ctx._source.systemId=params.systemId",
+    "params": {
+      "systemId": "200000000133"
+    }
+  }
+}
+```
+
 
 
 
