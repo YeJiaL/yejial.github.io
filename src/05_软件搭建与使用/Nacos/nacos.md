@@ -17,6 +17,12 @@
 
 
 
+startup.[cmd](https://so.csdn.net/so/search?q=cmd&spm=1001.2101.3001.7020) -m standalone
+
+
+
+
+
 
 
 

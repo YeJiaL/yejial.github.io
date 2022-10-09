@@ -66,3 +66,10 @@
 > 
 > return boolQueryBuilder;
 > ```
+
+
+
+### [Elasticsearch - 直观了解查询（ term、match、match_phrase和query_string）区别](https://bigmaning.blog.csdn.net/article/details/109477835?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-109477835-blog-107106190.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-109477835-blog-107106190.pc_relevant_aa&utm_relevant_index=1 )
+
+
+

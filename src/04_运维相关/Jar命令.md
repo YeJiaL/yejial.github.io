@@ -25,3 +25,8 @@
 
 
 
+
+
+inux后台执行adminjar文件并将日志打印到admin.log的命令是 ：
+
+> nohup java -jar admin.jar -> admin.log &

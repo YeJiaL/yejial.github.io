@@ -73,10 +73,32 @@ kubectl exec -it <podName> -c <containerName> -n <namespace> -- shell comand
 >
 > 张铮(Zheng ZHANG) 1-15 11:35:23
 > 登陆后执行  sudo su -  切换到root
+>
+> kubectl get po -n prod
 
 kubectl exec -it solar-iotservice-deploy-79698cfb95-22m8g -- /bin/bash   
 
 kubectl logs -f --tail 200 solar-iotservice-deploy-79698cfb95-22m8g
+
+
+
+kubectl logs -f --tail 200 solar-alert-admin-deploy-57f68cc4ff-xpgxg  -n prod
+
+kubectl logs -f --tail 200 solar-alert-admin-deploy-57f68cc4ff-m584x -n prod
+
+kubectl logs -f --tail 200 solar-mgr-admin-deploy-5cf4ccbcc9-pvw68 -n prod
+
+kubectl logs -f --tail 200 solar-iotservice-deploy-6f7db9c55-xlw7g -n prod
+
+kubectl logs -f --tail 200 solar-iotservice-deploy-6f7db9c55-4vf6x -n prod
+
+solar-monitor-deploy-789475b479-6tp6z
+
+
+
+solar-mgr-admin-deploy-5cf4ccbcc9-pvw68
+
+
 
 kubectl logs -f --tail 200 solar-iotservice-deploy-79698cfb95-22m8g
 
