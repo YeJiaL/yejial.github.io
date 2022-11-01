@@ -82,7 +82,7 @@ kubectl logs -f --tail 200 solar-iotservice-deploy-79698cfb95-22m8g
 
 
 
-kubectl logs -f --tail 200 solar-alert-admin-deploy-57f68cc4ff-xpgxg  -n prod
+kubectl logs -f --tail 200 solar-logreceiver-deploy-686d885cb5-4crl4
 
 kubectl logs -f --tail 200 solar-alert-admin-deploy-57f68cc4ff-m584x -n prod
 
@@ -90,7 +90,7 @@ kubectl logs -f --tail 200 solar-mgr-admin-deploy-5cf4ccbcc9-pvw68 -n prod
 
 kubectl logs -f --tail 200 solar-iotservice-deploy-6f7db9c55-xlw7g -n prod
 
-kubectl logs -f --tail 200 solar-iotservice-deploy-6f7db9c55-4vf6x -n prod
+kubectl logs -f --tail 200 solar-iotservice-deploy-59fbbd69b9-zghzt -n prod
 
 solar-monitor-deploy-789475b479-6tp6z
 

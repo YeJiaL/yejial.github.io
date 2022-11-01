@@ -1,0 +1,43 @@
+server:
+  port: 8848
+  tomcat:
+    basedir: logs
+
+db:
+  num: 1
+  user: root
+  password: Max123456
+  url:
+    0: jdbc:mysql://10.5.67.12:3306/common_nacos?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+
+nacos:
+  core:
+    auth:
+      system.type: nacos
+      enabled: false
+      plugin.nacos.token.secret.key: SecretKey012345678901234567890123456789012345678901234567890123456789
+  security:
+    ignore:
+      urls: /,/error,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/v1/auth/**,/v1/console/health/**,/actuator/**,/v1/console/server/**
+
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    platform: mysql
+  application:
+    name: nacos
+
+useAddressServer: true
+
+uih:
+  group:
+    names: UClass,UAP,Workflow,CGS,Solar,ChatBot
+
+management:
+  metrics:
+    export:
+      influx:
+        enabled: false
+      elastic:
+        enabled: false

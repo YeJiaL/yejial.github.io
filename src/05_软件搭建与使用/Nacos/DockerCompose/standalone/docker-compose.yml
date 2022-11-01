@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  nacos_test:
+    image: registry-dev.uihcloud.cn/com.uih.uplus.base/nacos:dev-20220607-20041
+    build:
+      context: .  
+    labels:
+      - com.host.description=nacos_test
+    container_name: nacos_test
+    command: /bin/bash -c "cd /root/nacos/target/ && java -jar -Dnacos.preferHostnameOverIp=true -Dnacos.standalone=true nacos-server.jar --spring.config.location=bootstrap.yml"
+    ports:
+      - 30122:8848
+      - 31122:9848
+    volumes:
+      - ./bootstrap.yml:/root/nacos/target/bootstrap.yml
+     #  - /nacos/config/cluster.conf:/root/nacos/conf/cluster.conf
+    deploy:
+      replicas: 1
