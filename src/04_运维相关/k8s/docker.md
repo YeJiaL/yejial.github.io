@@ -104,4 +104,6 @@ $ docker  rm $(docker ps -a -q) //   remove删除所有容器
 
 
 
-参考-[莫小安Docker-compose常用命令 - 特别实用](https://www.cnblogs.com/moxiaoan/p/9299404.html)
+docker的网络模式
+
+![image-20221101175240953](docker.assets/image-20221101175240953.png)
