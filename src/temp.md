@@ -1,132 +1,53 @@
-
-
-查询配置的分类模板关联
-
-```
-SELECT
-	id,
-	field_template_id,
-	archive_menu_name,
-	archive_menu_order,
-	field_id,
-	name,
-	field_type,
-	restrictions,
-	is_required,
-	field_order,
-	engineer_read,
-	engineer_write,
-	admin_read,
-	admin_write,
-	create_user_id,
-	create_datetime,
-	modify_user_id,
-	modify_datetime,
-	deleted
-FROM
-	field_template_config
-WHERE
-	deleted = 0
-	AND (field_template_id = 1386643587090923521
-		AND archive_menu_name = '设备效率')
-ORDER BY
-	field_order ASC
-
-```
+Failed to delete  [WinError 5] 拒绝访问python 
 
 
 
 
 
-所有值的查询
-
-```
-
--- 91 -- ==>  
- select
-	id,
-	field_template_id,
-	field_id,
-	name,
-	field_type,
-	restrictions,
-	create_user_id,
-	create_datetime,
-	modify_user_id,
-	modify_datetime,
-	deleted
-from
-	field_template_form
-where
-	deleted = 0
-	and (field_template_id = 1386643587090923521
-		and field_id = 1386650311088717826)
-
-```
+ **已有功能不要写在验收标准里面**
 
 
 
 
 
-表格形字段查询
+## 使用方法
 
-```
+### 安装
 
--- 91 -- ==>  
- select
-	id,
-	field_template_id,
-	field_id,
-	name,
-	field_type,
-	restrictions,
-	create_user_id,
-	create_datetime,
-	modify_user_id,
-	modify_datetime,
-	deleted
-from
-	field_template_form
-where
-	deleted = 0
-	and (field_template_id = 1386643587090923521
-		and field_id = 1386650311088717826)
+1. 检测config中的配置是否正确(若使用configMap，查看configMap中配置是否正确)
+2. 进入安装解压文件夹script文件夹中：`sh install.sh` 
 
-```
+### 卸载
+
+1. 检测config中的配置是否正确
+
+2. 进入安装解压文件夹script文件夹中：`sh install.sh` 
+
+   
 
 
+## 异常状况
 
-表格型字段值查询
+| 描述                                                         | 情况说明                                |
+| ------------------------------------------------------------ | --------------------------------------- |
+| kubectl 未找到，请先安装 kubectl！                           | k8s环境未安装，检测k8s使用环境          |
+| helm 未找到，请先安装 helm！                                 | helm环境未安装，检测helm使用环境        |
+| Traefik 未找到，请先安装 Traefik！                           | Traefik 环境未安装，检测Traefik使用环境 |
+| mysql client  pull failed                                    | mysql镜像拉取失败，检测相关配置         |
+| mysql install failed                                         | 数据库脚本安装失败，联系开发人员        |
+| docker push xxx failed                                       | 离线push到本地harber失败，检测相关配置  |
+| xxx healthy_check failed                                     | 健康检查安装失败，联系开发人员          |
+| namespace=xx,release_name=xx no app                          | 当前环境不存在卸载的app                 |
+| error:the server doesn't have a resource type "cm"<br />error:the server doesn't have a resource type "secrets" | 未执行kubectl apply -f cm.yaml          |
 
-```
 
--- 92 -- ==>  
- select
-	ffc.ID,
-	ffc.FIELD_TEMPLATE_ID,
-	ffc.DELETED,
-	ffc.FIELD_ID,
-	ffc.FIELD_TYPE,
-	ffc.DEVICE_ID,
-	ffc.STRING_VALUE,
-	ffc.DECIMAL_VALUE,
-	ffc.DATE_VALUE,
-	ffc.ENUM_VALUE,
-	ffc.CODE,
-	ffc.NAME,
-	ffc.LINE,
-	ftf.RESTRICTIONS
-from
-	`field_form_value` ffc
-left join field_template_form ftf on
-	(ffc.FIELD_TEMPLATE_ID = ftf.FIELD_TEMPLATE_ID
-		and ffc.FIELD
-		_ID = ftf.FIELD_ID
-		and ffc.`CODE` = ftf.`CODE`)
-where
-	ffc.FIELD_TEMPLATE_ID = 1386643587090923521
-	and ffc.DEVICE_ID = 1549590022197469185
-	and ffc.FIELD_ID = 1386650311088717826;
 
-```
+
+
+开发模式
+
+人员组织与架构
+
+晋升制度
+
 

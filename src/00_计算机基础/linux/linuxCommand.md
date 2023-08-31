@@ -157,6 +157,10 @@ Vim还有一个帮助菜单，可以通过“:help”调出来，基本能够解
 
 ## 查看文件大小
 
+ [Linux查询指定目录的文件夹及文件大小及排序](https://www.cnblogs.com/JourneyOfFlower/p/16284924.html)
+
+
+
 ```
 du -h ljl.txt
 ```

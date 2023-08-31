@@ -1,5 +1,7 @@
 # Git使用技巧
 
+[TOC]
+
 
 
 ## Git提交branch到remote
@@ -35,3 +37,28 @@ $ **git push** origin :test       // 刚提交到远程的test将被删除，但
 git commit -a --amend
 ```
 
+
+
+## git将多次commit合并为一条
+
+使用idea的git将多次commit合并为一条https://blog.csdn.net/qq_30757161/article/details/109480818
+
+实际开发会有这种场景：开发在开发分支修复了某个bug，但提交了多个commit，将它cherry pick到测试分支很麻烦，如果只将一个提交cherry pick到测试分支就会很方便，而且提交记录会很简洁
+
+步骤
+
+1、找到提交记录，右键，选择如图
+
+![img](assets/asynccode)
+
+2、把想要合并的记录，除了第一个外，均设置为：squash,如图，之后选择 start Rebasing
+
+![img](assets/asynccode)
+
+![img](assets/asynccode)
+
+3、填写提交信息，点击 resume rebasing 即可
+
+![img](assets/asynccode)
+
+大功告成

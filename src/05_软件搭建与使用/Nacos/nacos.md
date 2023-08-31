@@ -38,6 +38,12 @@ window下单机启动
 
 
 
+ [Docker之nacos集群部署](https://blog.csdn.net/weixin_60389087/article/details/123097097?spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7ERate-6-123097097-blog-91775010.pc_relevant_recovery_v2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7ERate-6-123097097-blog-91775010.pc_relevant_recovery_v2&utm_relevant_index=7)
+
+
+
+
+
 ## [docker从容器里面拷文件到宿主机或从宿主机拷文件到docker容器里面](https://www.cnblogs.com/areyouready/p/8973495.html)
 
 1. 从容器里面拷文件到宿主机
@@ -57,3 +63,12 @@ docker cp /opt/test.js testtomcat：/usr/local/tomcat/webapps/test/js
 
 
 
+
+
+集成了traefik
+
+\\10.2.53.1\DAPENG_Publish\R14\nacos\20230518-182327.tar.gz
+
+
+
+\\10.2.53.1\DAPENG_Publish\R14\nacos\20230518-182394.tar.gz

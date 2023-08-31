@@ -60,3 +60,12 @@ Class A:static void aDisplay(): i=5,j=3
 
 
 https://javadoop.com/
+
+
+
+
+
+https://blog.csdn.net/abc123mma/article/details/128153511 Java并发-交替打印的四种方法。
+
+
+

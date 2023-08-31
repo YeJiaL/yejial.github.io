@@ -124,3 +124,39 @@ kubectl logs -f --tail 200 solar-iotservice-deploy-79698cfb95-22m8g
 kubectl get ingress -n [命名空间]
 
 kubectl get ingress -n devr7myyOsL0g7D
+
+
+
+```
+scp pyxis-RKE-initialization.tar.gz root@10.6.121.182:/usr/local
+
+
+tar -xf pyxis-RKE-initialization.tar.gz
+```
+
+
+
+
+
+查询所有命名空间下image运行起来的资源
+
+kubectl get all -o wide -A 
+
+只需要查询一个命名空间就好
+
+```bash
+kubectl api-resources --verbs=list --namespaced -o name
+```
+
+查询所有命名空间下的所有资源
+kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -A
+
+当然，也可以只查询一个命名空间下的所有资源
+
+kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -n xxx(ns-name)
+————————————————
+版权声明：本文为CSDN博主「毛奇志」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_36963950/article/details/127477232
+
+
+

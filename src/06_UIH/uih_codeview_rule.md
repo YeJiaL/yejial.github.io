@@ -11,11 +11,11 @@ Test Instruction:如适用,填写需要提供给验证者的说明
 Unit Test Case No./Name:如适用,填写单元测试的ID号
 Changeset Number : 变更号,仅对软件适用.硬件不适用
 
-Problem Analysis:未按统一标准处理重复逻辑
-Solved Solution:按统一标准处理重复逻辑，定义错误code和msg.id
+Problem Analysis:初始化脚本调整
+Solved Solution:去除8026对外暴露端口
 Impact Analysis:N/A
-Solved Version:feature
-Test Instruction:N/A
+Solved Version:develop
+Test Instruction:redo the test
 Unit Test Case No./Name:
 Changeset Number :查看links
 

@@ -107,3 +107,86 @@ $ docker  rm $(docker ps -a -q) //   remove删除所有容器
 docker的网络模式
 
 ![image-20221101175240953](docker.assets/image-20221101175240953.png)
+
+
+
+
+
+docker 中 启动所有的容器命令
+
+```
+docker start $(docker ps -a | awk '{ print $1}' | tail -n +2)
+```
+
+docker 中 关闭所有的容器命令
+
+```
+docker stop $(docker ps -a | awk '{ print $1}' | tail -n +2)
+```
+
+docker 中 删除所有的容器命令
+
+```
+docker rm $(docker ps -a | awk '{ print $1}' | tail -n +2)
+```
+
+docker 中 删除所有的镜像
+
+```
+docker rmi $(docker images | awk '{print $3}' |tail -n +2)
+```
+
+ 
+
+ps:
+
+```
+echo "aa bb cc" | awk -F '{print $1}' 结果就是aa，意思是把字符串按空格分割，取第一个。
+
+awk 是用来提取列的主要工具；
+{print $1} 就是将某一行（一条记录）中以空格为分割符的第一个字段打印出来。
+```
+
+tail -n +2 表示从第二行开始读取
+
+ 
+
+// 事例
+
+docker start $(docker ps -aq) # 启动所有容器
+
+docker start $(docker ps -aq -f status=exited) # 启动所有状态为 exited 的容器，和上面的命令效果一致 
+
+docker rm $(docker ps -q --filter "status=exited") 
+
+
+
+
+
+## 启动失败的docker 查看日志
+
+
+
+在使用[docker](https://so.csdn.net/so/search?q=docker&spm=1001.2101.3001.7020)的时候，在某些未知的情况下可能启动了容器，但是过了没几秒容器自动退出了。这个时候如何排查问题呢?
+
+通常碰到这种情况无非就是环境有问题或者应用有问题，应用问题再本地可以进行调试解决，但是环境问题就比较头疼了。这个时候我们就需要查看容器的日志来进行排查。
+
+这里我们的容器id=60f486ec7c33
+
+我们可以通过如下命令来获取容器的日志地址
+
+docker inspect --format '{{.LogPath}}' 60f486ec7c33
+
+然后通过cat命令查看上述命令找到的日志地址
+
+cat /var/lib/docker/containers/97069f94437b86b50341f8253d85f426884315c3d027f7b7fa975751c7d8e18e/97069f94437b86b50341f8253d85f426884315c3d027f7b7fa975751c7d8e18e-json.log
+
+命令解释：
+
+docker inspect 用于获取容器/镜像的元数据。其中就包含容器日志的地址，上述命令只是增加了一个–format参数用于将日志地址过滤出来。
+
+docker inspect 中有很多信息，具体的大家可以自行查看。
+
+发现有更简单的命令
+
+docker logs 60f486ec7c33

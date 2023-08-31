@@ -2,6 +2,12 @@
 
 # windowsCommand
 
+
+
+
+
+
+
 ## window下命令
 
 [相关链接](https://www.cnblogs.com/accumulater/p/7110811.html)

@@ -55,18 +55,3 @@ Nacos 数据模型 Key 由三元组唯一确定, Namespace默认是空串，公�
    解决后如图:
    ![image-20221102100945586](uih-nacos.assets/image-20221102100945586.png)
 
-# 源码改造记录
-
-改造原则: 尽量减少源码入侵,方便以后升级
-改造工程: 目前只涉及到 console 和 console-ui 部分 核心部分未修改
-具体记录:
-
-## console-ui
-
-![image.png](https://navi.united-imaging.com/ugalaxy/b7a8ee72-c9aa-4962-91e2-48bcf3f4f10f/_apis/git/repositories/d9d1d5a9-4794-4e6b-b629-154a88520079/Items?path=%2F.attachments%2Fimage-638cf0da-553f-4ffc-89e2-6b0a617168a2.png&download=false&resolveLfs=true&%24format=octetStream&api-version=5.0-preview.1&sanitize=true&versionDescriptor.version=wikiMaster)
-
-## console
-
-![image.png](https://navi.united-imaging.com/ugalaxy/b7a8ee72-c9aa-4962-91e2-48bcf3f4f10f/_apis/git/repositories/d9d1d5a9-4794-4e6b-b629-154a88520079/Items?path=%2F.attachments%2Fimage-f23bd982-016e-446d-947d-5510c4b0096f.png&download=false&resolveLfs=true&%24format=octetStream&api-version=5.0-preview.1&sanitize=true&versionDescriptor.version=wikiMaster)
-
-后端改造基本上都放在了 uih 目录,后续直接copy这个目录到新项目即可
